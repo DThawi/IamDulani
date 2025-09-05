@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IamDulani</title>
+    <meta name="description" content="Creative portfolio of Dulani: web design, development, and UI/UX." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <span class="logo">D</span>
+          <span class="brand-text">IamDulani</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav id="nav-menu" class="nav-menu">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero reveal" aria-label="Intro">
+        <div class="orb orb-1" aria-hidden="true"></div>
+        <div class="orb orb-2" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1>
+              Hi, I'm <span class="gradient-text">Dulani Thawinsa</span><br />
+              Creative Web Designer & Developer
+            </h1>
+            <p>
+              An Information Systems undergraduate passionate about web design and development.
+               I love creating user-friendly websites and exploring new ideas. 
+               Let’s collaborate and bring innovative projects to life!
+            </p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#projects">View Projects</a>
+              <a class="btn ghost" href="#contact">Contact Me</a>
+            </div>
+            <div class="socials">
+            <a href="https://www.linkedin.com/in/dulani-thawinsa-136907335/"><i class='bx bxl-linkedin-square' ></i></a>
+            <a href="https://github.com/Dthawi"><i class='bx bxl-github'></i></a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img class="hero-photo" src="Images/MainProfile.jpg" alt="Portrait of Dulani" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+           <center> <h2>About Me</h2></center>
+          </div>
+
+          <article class="about-card about-me">
+            <div class="about-photo" aria-hidden="true">
+              <img src="Images/Second.jpg" alt="About Me Preview" />
+            </div>
+
+            <div class="about-content">
+              <p>
+                I am an undergraduate student pursuing a BSc (Hons) in Information Systems. Passionate about technology and design,
+                I aim to bridge the gap between creativity and functionality in the digital world.
+              </p>
+              <p>
+                I have foundational knowledge of web technologies like HTML, CSS, and JavaScript, which I use to create user‑friendly and visually
+                appealing websites. I'm constantly exploring new tools and frameworks to enhance my skills.
+              </p>
+              <p>
+                Curiosity drives me to learn new things, and I thrive on experimenting with innovative ideas. I'm committed to growth, not just academically
+                but also as a problem‑solver and a creator.
+              </p>
+              <p>
+                This portfolio is a space where I document my journey, share my projects, and showcase my growth. My goal is to become a proficient developer
+                who contributes meaningfully to the tech industry while continuously learning and evolving.
+              </p>
+              <p>
+                Feel free to explore my work or reach out. I'm always excited to collaborate and learn from others!
+              </p>
+
+              <div class="about-socials" aria-label="Social links">
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-instagram-alt' ></i>
+                <a href="https://www.linkedin.com/in/dulani-thawinsa-136907335/"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://github.com/Dthawi"><i class='bx bxl-github'></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <h2>Featured Projects</h2>
+            <p>A selection of work showcasing craft and problem‑solving.</p>
+          </div>
+          <div class="projects-grid">
+            <a class="project-card" href="https://dthawi.github.io/Basic-Calculator/" target="_blank" rel="noreferrer">
+              <div class="project-thumb" aria-hidden="true" style="background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('Images/Basic Calculator.png');"></div>
+              <div class="project-meta">
+                <h3>Basic Calculator</h3>
+                <p>A clean, responsive calculator supporting +, −, ×, ÷, %, decimals, clear/delete, full keyboard input, and three themes (Light, Dark, Neon) with saved preference.</p>
+                <span class="tags">HTML • CSS • JS</span>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://dthawi.github.io/BookWave-Online-Book-Store/" target="_blank" rel="noreferrer">
+              <div class="project-thumb" aria-hidden="true" style="background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('Images/BookWave_Online_Book_Store.png');"></div>
+              <div class="project-meta">
+                <h3>BookWave Online Book Store Website</h3>
+                <p>Animated portfolio concept with dynamic theme switching.</p>
+                <span class="tags">HTML • CSS • JS</span>
+              </div>
+            </a>
+            
+            <a class="project-card" href="https://dthawi.github.io/To-Do-List/" target="_blank" rel="noreferrer">
+              <div class="project-thumb" aria-hidden="true" style="background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('Images/ToDoList.png');"></div>
+              <div class="project-meta">
+                <h3>To Do List</h3>
+                <p>A simple to-do list application with basic CRUD functionality and local storage support.</p>
+                <span class="tags">HTML • CSS • JS</span>
+              </div>
+            </a>
+          </div>
+          <div class="projects-cta">
+            <a class="btn primary" href="projects.html">View All Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <h2>Skills</h2>
+            <p>Tools and technologies I use.</p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-header"><i class='bx bxl-html5'></i><span>HTML</span></div>
+              <div class="progress-bar"><div class="progress html" style="width:95%"></div></div>
+            </div>
+          
+            <div class="skill-card">
+              <div class="skill-header"><i class='bx bxl-css3'></i><span>CSS</span></div>
+              <div class="progress-bar"><div class="progress css" style="width:92%"></div></div>
+            </div>
+          
+            <div class="skill-card">
+              <div class="skill-header"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
+              <div class="progress-bar"><div class="progress js" style="width:88%"></div></div>
+            </div>
+          
+            <div class="skill-card">
+              <div class="skill-header"><i class='bx bx-mobile-alt'></i><span>Responsive Design</span></div>
+              <div class="progress-bar"><div class="progress responsive" style="width:80%"></div></div>
+            </div>
+          
+            <div class="skill-card">
+              <div class="skill-header"><i class='bx bxl-figma'></i><span>Figma</span></div>
+              <div class="progress-bar"><div class="progress figma" style="width:75%"></div></div>
+            </div>
+          
+            <div class="skill-card">
+              <div class="skill-header"><i class='bx bxl-react'></i><span>React</span></div>
+              <div class="progress-bar"><div class="progress react" style="width:20%"></div></div>
+            </div>
+          
+            <div class="skill-card">
+              <div class="skill-header"><i class='bx bxl-nodejs'></i><span>Node.js</span></div>
+              <div class="progress-bar"><div class="progress node" style="width:15%"></div></div>
+            </div>
+          </div>
+          
+          <div class="soft-skills">
+            <h2>Soft Skills</h2>
+            <p class="soft-desc">Essential interpersonal and professional abilities that complement my technical expertise.</p>
+            <div class="skills-grid">
+        
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class='bx bx-chat'></i><span>Communication</span>
+              </div>
+              <p class="soft-desc">Able to clearly explain ideas and concepts to team members.</p>
+              
+            </div>
+        
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class='bx bx-group'></i><span>Teamwork</span>
+              </div>
+              <p class="soft-desc">Worked on group projects, contributing and collaborating effectively.</p>
+              
+            </div>
+        
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class='bx bx-time'></i><span>Time Management</span>
+              </div>
+              <p class="soft-desc">Capable of balancing multiple tasks and meeting deadlines.</p>
+              
+            </div>
+        
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class='bx bx-bulb'></i><span>Problem Solving</span>
+              </div>
+              <p class="soft-desc">Creative in finding solutions and overcoming project challenges.</p>
+              <!-- <span class="skill-level">Good</span> -->
+            </div>
+        
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class='bx bx-refresh'></i><span>Adaptability</span>
+              </div>
+              <p class="soft-desc">Quick to learn new tools and adjust to different environments.</p>
+              <!-- <span class="skill-level">Excellent</span> -->
+            </div>
+        
+            <div class="skill-card">
+              <div class="skill-header">
+                <i class='bx bx-target-lock'></i><span>Leadership</span>
+              </div>
+              <p class="soft-desc">Experience guiding teammates and organizing project tasks.</p>
+              <!-- <span class="skill-level">Good</span> -->
+            </div>
+        
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal alt">
+        <div class="container contact-2col">
+          <div class="section-head">
+            <h2>Contact Me….</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-cards">
+              
+              <div class="contact-card">
+                <h4>My Email:</h4>
+                <p>dulanithawinsa031@gmail.com</p>
+              </div>
+              <div class="contact-card">
+                <h4>Call me:</h4>
+                <p>+94 77 373 2085</p>
+              </div>
+            </div>
+
+            <form class="contact-form minimal" name="contact" netlify>
+              <input type="hidden" name="form-name" value="contact" />
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" required />
+              </label>
+              <label>
+                <span>Location</span>
+                <input type="text" name="location" />
+              </label>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" required></textarea>
+              </label>
+              <button class="btn submit" type="submit">Submit</button>
+              <div class="contact-socials">
+                <i class='bx bxl-facebook'></i>
+                <i class='bx bxl-instagram'></i>
+                <a href="https://www.linkedin.com/in/dulani-thawinsa-136907335/"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://github.com/Dthawi"><i class='bx bxl-github'></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer new">
+      <div class="container footer-top">
+        <div class="brandline">
+          <span class="logo">D</span>
+          <span class="brand-text">IamDulani</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="#about">About Me</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn ghost cv" href="#">Download CV</a>
+      </div>
+      <div class="container footer-bottom">
+        <small>© <span id="year"></span> Dulani</small>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+

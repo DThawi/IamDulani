@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Dulani</title>
+    <meta name="description" content="Explore all my web development projects and creative work." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <span class="logo">D</span>
+          <span class="brand-text">IamDulani</span>
+        </a>
+
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <nav id="nav-menu" class="nav-menu">
+          <a href="index.html#about">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section reveal">
+        <div class="container">
+          <div class="section-head">
+            <h1>My Projects</h1>
+            <p>A collection of my web development work, from simple calculators to full-featured applications.</p>
+          </div>
+          <div class="projects-grid">
+            <a class="project-card" href="https://dthawi.github.io/Basic-Calculator/" target="_blank" rel="noreferrer">
+              <div class="project-thumb" aria-hidden="true" style="background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('Images/Basic Calculator.png');"></div>
+              <div class="project-meta">
+                <h3>Basic Calculator</h3>
+                <p>A clean, responsive calculator supporting +, −, ×, ÷, %, decimals, clear/delete, full keyboard input, and three themes (Light, Dark, Neon) with saved preference.</p>
+                <span class="tags">HTML • CSS • JS</span>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://dthawi.github.io/BookWave-Online-Book-Store/" target="_blank" rel="noreferrer">
+              <div class="project-thumb" aria-hidden="true" style="background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('Images/BookWave_Online_Book_Store.png');"></div>
+              <div class="project-meta">
+                <h3>BookWave Online Book Store</h3>
+                <p>An e-commerce website for books with modern design, shopping cart functionality, and responsive layout.</p>
+                <span class="tags">HTML • CSS • JS</span>
+              </div>
+            </a>
+            
+            <a class="project-card" href="https://dthawi.github.io/To-Do-List/" target="_blank" rel="noreferrer">
+              <div class="project-thumb" aria-hidden="true" style="background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('Images/ToDoList.png');"></div>
+              <div class="project-meta">
+                <h3>To Do List</h3>
+                <p>A simple to-do list application with basic CRUD functionality and local storage support.</p>
+                <span class="tags">HTML • CSS • JS</span>
+              </div>
+            </a>            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer new">
+      <div class="container footer-top">
+        <div class="brandline">
+          <span class="logo">D</span>
+          <span class="brand-text">IamDulani</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html#about">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a class="btn ghost cv" href="#">Download CV</a>
+      </div>
+      <div class="container footer-bottom">
+        <small>© <span id="year"></span> Dulani</small>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
