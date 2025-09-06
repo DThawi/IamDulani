@@ -262,6 +262,10 @@ body {
 .progress.figma { background: #a259ff; }
 .progress.react { background: #61dafb; }
 .progress.node { background: #3c873a; }
+.progress.java { background: #007396; }
+.progress.python { background: #3776ab; }
+
+
 
 .soft-skills {
   margin-top: var(--space-10);
