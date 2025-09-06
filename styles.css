@@ -133,7 +133,21 @@ body {
 .hero > * { position: relative; z-index: 1; }
 .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-8); align-items: center; }
 .hero-text h1 { font-size: clamp(32px, 6vw, 56px); line-height: 1.05; margin: 0 0 12px; }
-.gradient-text { background: linear-gradient(135deg, var(--primary), var(--primary-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.gradient-text { 
+  background: linear-gradient(135deg, var(--primary), var(--primary-2)); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gradient-text:hover {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform: scale(1.05);
+}
 .hero-text p { color: var(--muted); margin: 0 0 var(--space-6); max-width: 60ch; }
 .hero-cta { display: flex; gap: var(--space-3); margin-bottom: var(--space-5); }
 
@@ -252,6 +266,12 @@ body {
 .progress {
   height: 100%;
   border-radius: 10px;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
+.progress.animate {
+  width: var(--target-width);
 }
 
 /* Progress bar colors */
@@ -380,6 +400,32 @@ body {
 /* Reveal animations */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Simple hover effects */
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Image fade-in animation */
+@keyframes imageFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.fade-in-image {
+  animation: imageFadeIn 1.1s ease-out 0.3s both;
+}
+
 
 /* Responsive */
 @media (max-width: 920px) {

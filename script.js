@@ -68,4 +68,46 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
+// Simple hover effects for better UX
+document.addEventListener('DOMContentLoaded', function() {
+  // Add subtle hover effects to buttons
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(button => {
+    button.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-2px)';
+    });
+    button.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+
+  // Animate progress bars when skills section comes into view
+  animateProgressBars();
+});
+
+function animateProgressBars() {
+  const progressBars = document.querySelectorAll('.progress');
+  
+  const progressObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const progressBar = entry.target;
+        const targetWidth = progressBar.getAttribute('data-width');
+        
+        // Set the target width and trigger animation
+        progressBar.style.setProperty('--target-width', targetWidth);
+        progressBar.classList.add('animate');
+        
+        // Stop observing this element
+        progressObserver.unobserve(progressBar);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // Observe all progress bars
+  progressBars.forEach(bar => {
+    progressObserver.observe(bar);
+  });
+}
+
 
