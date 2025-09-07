@@ -205,15 +205,121 @@ body {
 .about-socials i:hover { transform: translateY(-2px); background: #22d3ee; color: #0b0b10; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
-.project-card { display: grid; grid-template-rows: 180px auto; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; text-decoration: none; color: var(--text); box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease; }
-.project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(0,0,0,0.45); }
-.project-thumb { background-size: cover; background-position: center; filter: saturate(1.2) contrast(1.05); }
-/* .thumb-1 { background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600&auto=format&fit=crop'); }
-.thumb-2 { background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1600&auto=format&fit=crop'); }
-.thumb-3 { background-image: linear-gradient(135deg, rgba(124,58,237,0.35), rgba(34,211,238,0.25)), url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop'); } */
-.project-meta { padding: var(--space-4) var(--space-4) var(--space-5); }
-.project-meta h3 { margin: 0 0 var(--space-2); }
-.tags { color: var(--muted); font-size: 13px; }
+
+.project-card { 
+  display: flex;
+  flex-direction: column;
+  background: var(--surface); 
+  border: 1px solid var(--border); 
+  border-radius: 18px; 
+  overflow: hidden; 
+  color: var(--text); 
+  box-shadow: var(--shadow); 
+  transition: transform .2s ease, box-shadow .2s ease; 
+  height: 100%;
+}
+
+.project-card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 16px 36px rgba(0,0,0,0.45); 
+}
+
+.project-link {
+  display: grid;
+  grid-template-rows: 180px auto;
+  text-decoration: none;
+  color: var(--text);
+  flex-grow: 1;
+}
+
+.project-thumb { 
+  background-size: cover; 
+  background-position: center; 
+  filter: saturate(1.2) contrast(1.05); 
+}
+
+.project-meta { 
+  padding: var(--space-4) var(--space-4) var(--space-3); 
+}
+.project-meta h3 { 
+  margin: 0 0 var(--space-2); 
+  font-size: 18px;
+  font-weight: 600;
+}
+.project-meta p { 
+  margin: 0 0 var(--space-3); 
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.tags { 
+  color: var(--muted); 
+  font-size: 13px; 
+  font-weight: 500;
+  background: var(--glass);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: inline-block;
+}
+
+/* .github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  margin: var(--space-3) var(--space-4) var(--space-4);
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  box-shadow: 0 10px 24px rgba(124,58,237,0.35), 0 6px 18px rgba(34,211,238,0.25);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  align-self: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  margin: var(--space-3) var(--space-4) var(--space-4);
+
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 13px;
+
+  transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+  align-self: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.github-btn:hover {
+  background: color-mix(in srgb, var(--surface) 85%, var(--text) 15%);
+  color: var(--text);
+  border-color: var(--glass);
+}
+
+
+/* .github-btn i {
+  font-size: 18px;
+} */
 
 .projects-cta {
   display: flex;
