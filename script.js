@@ -111,3 +111,54 @@ function animateProgressBars() {
 }
 
 
+const express = require('express');
+const nodemailer = require('nodemailer');
+const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.post('/send-email', async (req, res) => {
+  const { name, email, location, message } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: { user: 'your-email@gmail.com', pass: 'your-app-password' }
+  });
+
+  const mailOptions = {
+    from: email,
+    to: 'your-email@gmail.com',
+    subject: `New Contact from ${name}`,
+    text: `Name: ${name}\nEmail: ${email}\nLocation: ${location}\nMessage: ${message}`
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.send({ success: true });
+  } catch (err) {
+    res.status(500).send({ success: false, error: err.message });
+  }
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
+
+
+contactForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const formData = new FormData(contactForm);
+  const data = Object.fromEntries(formData);
+
+  const res = await fetch('/send-email', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  });
+
+  if (res.ok) {
+    alert('Message sent!');
+    contactForm.reset();
+  } else {
+    alert('Failed to send message.');
+  }
+});
